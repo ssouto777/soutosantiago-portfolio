@@ -1,50 +1,103 @@
 <!DOCTYPE html>
-    <html lang="en">
-     <head>
-      <meta charset="UTF-8">
-      <title="Htmlbasic"></title>
-      <link rel="stylesheet" href="styles.css">
-     </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santiago Souto Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-     <body>
+    <!-- Header / Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Santiago Souto</div>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-       <header>
-         <h1 id="title">Basic html</h1>
-         <button id="btn">Change title</button>
-         <br>
-       </header>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Professional Websites for Your Business</h1>
+            <p>Modern, responsive, and fast websites built to help your brand grow online.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
 
-    <main>
-        <aside>
-            <p>Aside here</p>
-        </aside>
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I create stunning, AI-assisted websites for content creators, businesses, and entrepreneurs. Every website is modern, responsive, and optimized to help your brand grow online.</p>
+        </div>
+    </section>
 
-        <section>
-            <article>
-                <br>
-            <input id="nameInput" placeholder="Your name">
-            <button id="helloBtn">Say hi</button>
-            <p id="result"></p>
-            </article>
-        </section>
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Website Design</h3>
+                    <p>Beautiful, responsive layouts tailored for your brand.</p>
+                </div>
+                <div class="service-card">
+                    <h3>AI-Assisted Development</h3>
+                    <p>Fast and efficient website builds using AI technology.</p>
+                </div>
+                <div class="service-card">
+                    <h3>SEO Optimization</h3>
+                    <p>Get found on Google with clean, optimized code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section>
-            <article>
-                <br><br><br><br><br>
-                <p><strong>COUNTER</strong></p>
-                <br>
-            <p id="count">0</p>
-            <button id="plus">+</button>
-            <button id="minus">-</button>
-            <button id="reset">Reset</button>
-            </article>
-        </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="images/istockphoto-2202954159-612x612.webp" alt="Content Creator Website">
+                    <p>Content Creator Website</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/istockphoto-2202954159-612x612.webp" alt="Small Business Website">
+                    <p>Small Business Website</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/istockphoto-2202954159-612x612.webp" alt="Game Landing Page">
+                    <p>Game Landing Page</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-     </main>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/xpqzezzq" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-        <br><br><br><br><footer>End of website</footer>
-  
-     <script src="script1.js"></script>
-     
-    </body> 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Santiago Souto. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
