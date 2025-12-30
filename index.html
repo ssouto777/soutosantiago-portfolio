@@ -93,6 +93,17 @@
         </div>
     </section>
 
+    <script>
+const form = document.querySelector('form');
+form.addEventListener('submit', e => {
+    // Allow Formspree to handle sending
+    setTimeout(() => {
+        alert('Thanks! Your message has been sent.');
+        form.reset();
+    }, 100); // small delay so submission isn’t blocked
+});
+</script>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Santiago Souto. All Rights Reserved.</p>
