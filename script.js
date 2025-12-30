@@ -32,10 +32,30 @@ menuButton.addEventListener('click', () => {
     navLinksContainer.classList.toggle('active');
 });
 
-// Simple form submission feedback (doesn't actually send email)
-if (form) { // Check if form exists
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        form.reset();
+// Form submission using Formspree (no redirect)
+if (form) { // check if form exists
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // stop default submit
+
+        const data = new FormData(form);
+        const action = form.action;
+
+        try {
+            const response = await fetch(action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                alert('Thanks! Your message has been sent.');
+                form.reset();
+            } else {
+                alert('Oops! There was a problem sending your message.');
+            }
+        } catch (error) {
+            alert('Oops! There was a problem sending your message.');
+            console.error(error);
+        }
     });
 }
